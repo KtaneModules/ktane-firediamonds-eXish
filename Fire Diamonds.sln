@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fire Diamonds", "Fire Diamonds.csproj", "{455E2D29-67B6-1B36-1629-C9BE45831C90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fire Diamonds.Editor", "Fire Diamonds.Editor.csproj", "{1A0DAE0C-7271-A96B-5B0C-06D1D2890E55}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{455E2D29-67B6-1B36-1629-C9BE45831C90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{455E2D29-67B6-1B36-1629-C9BE45831C90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{455E2D29-67B6-1B36-1629-C9BE45831C90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{455E2D29-67B6-1B36-1629-C9BE45831C90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A0DAE0C-7271-A96B-5B0C-06D1D2890E55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A0DAE0C-7271-A96B-5B0C-06D1D2890E55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A0DAE0C-7271-A96B-5B0C-06D1D2890E55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A0DAE0C-7271-A96B-5B0C-06D1D2890E55}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
