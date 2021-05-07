@@ -11,13 +11,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 615501dbe4f3fe94fbf4b564abb10237, type: 3}
   m_Name: ModConfig
   m_EditorClassIdentifier: 
-  id: xelFireDiamonds
+  id: fireDiamondsModule
   title: Fire Diamonds
-  author: Mirage Xel
+  author: eXish, Danny7007
   description: "Also known as a Safety Square, or if you\u2019re British, a \u201CFigmenty
-    Pigmenty Crosser Tosser\u201D.\r\nFire Diamonds regular module by Mirage Xel.
-    Manual origunallly by Danny7007.\r\nModule ID: xelFireDiamonds\r\nTemp Manual:
-    https://docs.google.com/document/d/1KstiK7nlEHkdaNzuB3lOUy7AkL2oCH_pWqheQLODfL4/edit?usp=sharing"
+    Pigmenty Crosser Tosser\u201D.\r\n\nHTML: https://ktane.timwi.de/HTML/Fire%20Diamonds.html\r\nPDF:
+    https://ktane.timwi.de/PDF/Fire%20Diamonds.pdf\r\n\r\nFire Diamonds (fireDiamondsModule)
+    v1.0.0\r\nModule Idea by Danny7007\nImplemented by eXish\r\nTwitch Plays supported"
   version: 1.0
   outputFolder: build
   previewImage: {fileID: 2800000, guid: d031bb6c30459064b8e01b8f6b9080bb, type: 3}
