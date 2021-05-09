@@ -87,7 +87,7 @@ public class FireDiamondsScript : MonoBehaviour {
     }
 
     void Start () {
-        indicators = bomb.GetIndicators().Join();
+        indicators = bomb.GetIndicators().Join("");
         CalcStage();
         ReformatLooks();
 	}
@@ -268,8 +268,8 @@ public class FireDiamondsScript : MonoBehaviour {
                         case 4:
                         case 5:
                         case 6:
-                                    usedSequence[index] = 2;
-                                    break;
+                            usedSequence[index] = 2;
+                            break;
                         default:
                             switch (stageCounter)
                             {
