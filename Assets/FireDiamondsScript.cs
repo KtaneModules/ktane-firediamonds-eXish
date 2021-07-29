@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using KModkit;
 using System.Linq;
@@ -94,7 +93,7 @@ public class FireDiamondsScript : MonoBehaviour {
 
     void CalcStage() {
         usedSubstance = substances[rnd.Range(0, 24)];
-        Debug.LogFormat("[Fire Diamonds #{0}] <Stage {2}> The subtance on the module is {1}.", moduleId, substanceNames[Array.IndexOf(substances, usedSubstance)], stageCounter + 1);
+        Debug.LogFormat("[Fire Diamonds #{0}] <Stage {2}> The substance on the module is {1}.", moduleId, substanceNames[Array.IndexOf(substances, usedSubstance)], stageCounter + 1);
         usedSequence = new int[5];
         for (int i = 0; i < 5; i++)
             usedSequence[i] = sequences[Array.IndexOf(substances, usedSubstance)][i];
@@ -385,13 +384,13 @@ public class FireDiamondsScript : MonoBehaviour {
     }
 
     #pragma warning disable 414
-    private string TwitchHelpMessage = "Use '!{0} red/blue/yellow/white' to press the corresponding square (can be chained). Use '!{0} reset' to clear all inputs.";
+    private string TwitchHelpMessage = "Use '!{0} red/blue/yellow/white' to press the corresponding square (can be chained or abbreviated). Use '!{0} reset' to clear all inputs.";
     #pragma warning restore 414
     IEnumerator ProcessTwitchCommand(string command)
     {
         command = command.ToLowerInvariant();
         string[] commandArray = command.Split(' ');
-        string[] validcmds = new string[] { "red", "blue", "yellow", "white" };
+        string[] validcmds = new string[] { "red", "blue", "yellow", "white", "r", "b", "y", "w" };
         if (commandArray[0] == "reset")
         {
             yield return null;
@@ -412,11 +411,14 @@ public class FireDiamondsScript : MonoBehaviour {
             yield return null;
             for (int i = 0; i < commandArray.Length; i++)
             {
-                for (int j = 0; j < 4; j++)
+                for (int j = 0; j < 8; j++)
                 {
                     if (commandArray[i] == validcmds[j])
                     {
-                        diamond[j].OnInteract();
+                        if (j > 3)
+                            diamond[j - 4].OnInteract();
+                        else
+                            diamond[j].OnInteract();
                         yield return new WaitForSeconds(0.1f);
                     }
                 }
