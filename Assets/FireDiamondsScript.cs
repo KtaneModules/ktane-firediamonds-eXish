@@ -81,7 +81,7 @@ public class FireDiamondsScript : MonoBehaviour {
         moduleId = moduleIdCounter++;
         foreach (KMSelectable cell in diamond) {
             KMSelectable i = cell;
-            i.OnInteract += delegate { pressDiamond(i); return false; };
+            i.OnInteract += delegate { PressDiamond(i); return false; };
         }
     }
 
@@ -97,7 +97,7 @@ public class FireDiamondsScript : MonoBehaviour {
         usedSequence = new int[5];
         for (int i = 0; i < 5; i++)
             usedSequence[i] = sequences[Array.IndexOf(substances, usedSubstance)][i];
-        Debug.LogFormat("[Fire Diamonds #{0}] <Stage {6}> The sequence before applying tranformations is {1}, {2}, {3}, {4}, {5}.", moduleId, colorsLogging[usedSequence[0]], colorsLogging[usedSequence[1]], colorsLogging[usedSequence[2]], colorsLogging[usedSequence[3]], colorsLogging[usedSequence[4]], stageCounter + 1);
+        Debug.LogFormat("[Fire Diamonds #{0}] <Stage {6}> The sequence before applying transformations is {1}, {2}, {3}, {4}, {5}.", moduleId, colorsLogging[usedSequence[0]], colorsLogging[usedSequence[1]], colorsLogging[usedSequence[2]], colorsLogging[usedSequence[3]], colorsLogging[usedSequence[4]], stageCounter + 1);
         int index = 0;
         foreach (int i in usedSequence) {
             switch (i)
@@ -288,10 +288,10 @@ public class FireDiamondsScript : MonoBehaviour {
             }
             index++;
         }
-        Debug.LogFormat("[Fire Diamonds #{0}] <Stage {6}> The sequence after applying tranformations is {1}, {2}, {3}, {4}, {5}.", moduleId, colorsLogging[usedSequence[0]], colorsLogging[usedSequence[1]], colorsLogging[usedSequence[2]], colorsLogging[usedSequence[3]], colorsLogging[usedSequence[4]], stageCounter + 1);
+        Debug.LogFormat("[Fire Diamonds #{0}] <Stage {6}> The sequence after applying transformations is {1}, {2}, {3}, {4}, {5}.", moduleId, colorsLogging[usedSequence[0]], colorsLogging[usedSequence[1]], colorsLogging[usedSequence[2]], colorsLogging[usedSequence[3]], colorsLogging[usedSequence[4]], stageCounter + 1);
     }
 
-    void pressDiamond(KMSelectable cell)
+    void PressDiamond(KMSelectable cell)
     {
         if (!solved)
         {
@@ -451,4 +451,3 @@ public class FireDiamondsScript : MonoBehaviour {
         }
     }
 }
-
